@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Lato:wght@300&family=Pattaya&family=Tajawal:wght@200&display=swap');
+:root{
+    --main--color:rgb(4, 12, 62);
+    --text--color: rgb(239, 208, 4);
+    --main2--color: antiquewhite;
+    --text2--color: rgb(93, 82, 112);
+}
+button{
+    margin: 0;
+
+}
+body{
+   margin: 0;
+   padding: 0;
+   
+}
+a{
+    text-decoration: none;
+}
+
+.header{
+    background-color:rgb(8, 18, 78);
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.lg img{
+    max-width: 80px;
+    height: auto;
+}
+.main-menu{
+    display: flex;
+    list-style: none;
+    z-index: 1;
+}
+.main-menu li a{
+    color: var(--text--color);
+    display: block;
+    padding: 18px 20px;
+    text-decoration: none;
+}
+.main-menu ul.sub-menu{
+    position: absolute;
+    background-color: rgb(8, 18, 78);
+    padding-top: 10px;
+    padding-left: 0;
+    list-style:none ;
+    width: 200px;
+    border: 1px solid rgb(13, 12, 12);
+    display: none;
+    
+}
+.main-menu li:hover>ul.sub-menu{
+    display: block;
+}
+
+.main-menu ul.sub-menu a{
+    padding: 8px 15px;
+    border-bottom: 1px solid rgb(5, 3, 3) ;
+    left: 0;
+} 
+.main-menu ul.sub-menu li:hover>a{
+    border-left: 2.5px solid var(--text--color);
+   
+}
+
+.main-menu>li>a{
+    position: relative;
+}
+.main-menu>li>a::before{
+    content: "";
+    height: 2.5px;
+    width: 0%;
+    background-color: var(--text--color);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.25s;
+}
+.main-menu>li:hover>a::before{
+    width: 100%;
+}
+/*hinh */
+.big-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    position: relative;
+}
+.big-image::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:url("./hinh/cafe1.jpg") ;
+    background-position: center;
+    background-repeat:no-repeat ;
+    background-size:cover ;
+    z-index: -2;
+}
+@keyframes inut{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+}
+.big-image::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.2;
+    z-index: -2;
+}
+.big-image .big-image-cntent{
+    text-align: center;
+    max-width: 500px;
+}
+.big-image .big-image-cntent h2{
+    font-size: 50px;
+    color: white;
+    font-family: 'Dancing Script';
+}
+.big-image .big-image-cntent p{
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    margin: 15px 0px;
+}
+.hai{
+    width: 100%;
+    height: auto;
+    background-color: var(--main--color);
+    text-align: center;
+    box-sizing: border-box;
+    color:rgb(253, 244, 244);
+    padding: 80px ;
+}
+.hai .hai-text{
+    flex: 1;
+    padding-bottom: 10px;
+}
+.hai .hai-node{
+    flex :1;
+    display: flex;
+    flex-direction: column;
+
+}
+@media (min-width:740px){
+    .hai .hai-node{
+        flex-direction: row;
+    }
+    
+}
+.hai .hai-node-item i{
+    font-size: 80px;
+    color: rgb(179, 186, 237);
+ }
+.hai .hai-node-item
+,.hai-text{
+    justify-content: space-around;
+    padding: 28px 28px;
+}
+
+.tieude{
+    color: var(--text--color);
+    font-family: 'Dancing Script';
+    font-size: 20px;
+}
+.chinh{
+    color: var(--text--color);
+    font-family:'Pattaya';
+    font-size: 40px;
+    text-transform: capitalize;
+    text-align: center;
+
+}
+.y{
+    font-family:   sans-serif;
+    font-weight: 2;
+   
+}
+.ba{
+    background-color:var(--main2--color);
+    text-align: center;
+    padding: 12px 18px 60px 18px;
+}
+.ba .ba-node{
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 55px;
+    flex-direction:column;
+}
+@media (min-width:740px){
+    .ba .ba-node{
+        flex-direction: row;
+    }
+    
+}
+.ba .ba-node-item img{
+    max-width: 360px;
+    height: 240px;
+}
+.ba .ba-node-item h5{
+    color: var(--text2--color);
+}
+.ba .ba-node-item {
+    padding: 0px 27px;
+    text-align: left;
+}
+.xemthem{
+    background-color: transparent;
+    font-family: sans-serif;;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease-in;
+}
+
+.xemthem:hover{ 
+    border-radius: 60px ;
+    box-shadow: 5px 10px 18px var(--text--color);
+
+}
+.bon img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+#wrapper{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.nam{
+    background-color:var(--main2--color);
+    padding: 60px;
+}
+.nam-text .y{
+    text-align: center;
+    padding: 0px 60px 60px 0px;
+    color: var(--text2--color);
+}
+ul.nam-text-sanpham{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+  
+}
+ul.nam-text-sanpham li{
+    flex-basis: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    margin-bottom: 32px;
+
+   
+}
+ul.nam-text-sanpham li img{
+    max-width: 100%;
+    height: auto;
+}
+ul.nam-text-sanpham li .nam-text-k {
+    position: relative;
+    overflow: hidden;
+}
+ul.nam-text-sanpham li .nam-text-k .nam-hinh {
+
+    display: block;
+}
+ul.nam-text-sanpham li:hover .nam-text-k .nam-hinh img{
+    filter:opacity(80%);
+}
+ul.nam-text-sanpham li .nam-text-k .nam-hinh img{
+    display: block;
+
+}
+ul.nam-text-sanpham li .nam-text-k a.buy{
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    background-color: black;
+    color: var(--text--color);
+    padding: 10px 0px;
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    transition: 0.25s ease-in-out;
+    opacity: 0.85;
+}
+ul.nam-text-sanpham li:hover a.buy{
+    bottom: 0px;
+}
+ul.nam-text-sanpham li .nam-text-text a{
+    display: block;
+    text-decoration: none;
+}
+
+ul.nam-text-sanpham li .nam-text-text a.text-name{
+    font-size: 20px;
+    font-weight: 4px;
+    padding: 3px 8px;
+    color: var(--main--color); 
+    font-family:'Dancing Script'; 
+}
+ul.nam-text-sanpham li .nam-text-text .text-gia{
+    color: #000;
+    padding: 2px 0px;
+    font-weight: 600;
+}
+
+ul.nam-text-sanpham li .nam-text-text {
+    padding: 10px 0px;
+}
+
+/*sau*/
+.sau{
+    background-color: var(--main--color);
+    padding: 20px 60px 60px 20px;
+    display: flex;
+    flex: 1;
+}
+.lienhe{
+    color: var(--text--color);
+    font-family:'Pattaya';
+    font-size: 40px;
+    text-transform: capitalize;
+}
+.sau .sau-tt-lienhe{
+    font-family: sans-serif;
+    padding: 0px 40px;
+    flex: 1;
+}
+.sau .sau-tt-lienhe h5{
+    color: var(--text--color);
+}
+.sau .sau-tt-lienhe .noidung{
+    color: white;
+}
+.sau-dientt{
+    padding: 0px 40px;
+    justify-content: center;
+    flex:1;
+}
+.sau-dientt li input{
+    width: 344px;
+    height: 80px;
+    background-color: transparent;
+    border:rgb(179, 186, 237);
+    border: 1px solid white;
+    display: block;
+    margin: 12px 0px;
+}
+.sau-dientt li button{
+    width: 100px;
+    font-size: 20px;
+    border-radius: 50px;
+    background-color: var(--text--color);
+    font-family: sans-serif;
+    cursor: pointer;
+    border: 0px;
+    display: block;
+    padding: 14px;
+}
+.sau-dientt li:hover input{
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+    color: white;
+}
+.sau-dientt button:hover{
+    background-color: antiquewhite;
+}
+.sau-dientt li{
+   list-style: none;
+}
+
+
